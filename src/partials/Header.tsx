@@ -58,16 +58,16 @@ export default function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<header className='bg-darkTurquis shadow-shadowHeader'>
+		<header className='bg-darkTurquis fixed top-0 w-full shadow-shadowHeader'>
 			<nav
 				aria-label='Global'
-				className='mx-auto flex max-w-[100rem] items-center justify-between px-8 py-6 lg:px-10'>
+				className='mx-auto flex max-w-[120rem] items-center justify-between px-8 py-6 lg:px-10'>
 				{/* Logo and Title for large screens */}
 				<div className='flex items-center'>
 					{/* Logo */}
 					<a href='#' className='-m-1.5 p-1.5'>
 						<span className='sr-only'>Your Company</span>
-						<img alt='' src={logo} className='h-auto w-[3.6rem]' />
+						<img alt='' src={logo} className='h-auto w-12 md:w-[3.6rem]' />
 					</a>
 					{/* Title for large screens */}
 					<h1 className='hidden lg:block text-lg font-sans text-darkBrown font-light ml-10 text-center'>
@@ -78,7 +78,7 @@ export default function Header() {
 				</div>
 
 				{/* Title for small screens */}
-				<h1 className='block lg:hidden text-lg font-sans text-darkBrown font-light text-center w-full'>
+				<h1 className='block lg:hidden text-lg font-sans mr-[17px] text-darkBrown font-light text-center w-full'>
 					PRAXIS
 					<br />
 					URVERTRAUEN

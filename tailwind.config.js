@@ -6,6 +6,7 @@ export default {
 			fontFamily: {
 				sans: ["kaisei-opti", "nunito", "Helvetica", "sans-serif"],
 				mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+				title: ["Felt Tip Roman", "sans-serif"],
 			},
 			colors: {
 				inherit: "inherit",
