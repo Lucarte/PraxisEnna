@@ -22,6 +22,7 @@ export default {
 			backgroundImage: {
 				"gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
 				"gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
+				"footer-bg": "url('/src/assets/footerBG.png')",
 			},
 			gradientColorStops: {
 				darkBrown: "#7e5e45", // Corresponds to .from-darkBrown
@@ -49,6 +50,9 @@ export default {
 			height: {
 				"0.2rem": "0.2rem",
 				"8rem": "8rem",
+			},
+			lineHeight: {
+				"tight-custom": "1.2",
 			},
 			translate: {
 				"-5px": "-5px",
@@ -81,6 +85,9 @@ export default {
 			},
 			transitionDuration: {
 				150: "0.15s",
+			},
+			transform: {
+				"rotate-x-50": "rotateX(50deg)",
 			},
 		},
 	},
