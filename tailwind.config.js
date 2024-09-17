@@ -23,6 +23,7 @@ export default {
 				"gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
 				"gradient-to-r": "linear-gradient(to right, var(--tw-gradient-stops))",
 				"footer-bg": "url('/src/assets/footerBG.png')",
+				"footer-mobile": "url('/src/assets/footerMobileImg.png')",
 			},
 			gradientColorStops: {
 				darkBrown: "#7e5e45", // Corresponds to .from-darkBrown

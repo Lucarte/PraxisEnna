@@ -1,6 +1,6 @@
 "use client";
-
-import { useState } from "react";
+import { HashLink } from "react-router-hash-link";
+import { useEffect, useState } from "react";
 import {
 	Dialog,
 	DialogPanel,
@@ -14,63 +14,51 @@ import {
 } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import logo from "/src/assets/logo_foto.svg";
+import { Link, useLocation } from "react-router-dom";
 
 const ueberMich = [
-	{
-		name: "Kennst du das",
-		href: "#",
-	},
-	{
-		name: "Qualifikationen",
-		href: "#",
-	},
+	{ name: "Kennst du das", href: "/uebermich#kennstdudas" },
+	{ name: "Qualifikationen", href: "/uebermich#qualifikationen" },
 ];
+
 const angebot = [
 	{
 		name: "Dialogische Körpertherapie",
-		href: "#",
+		href: "/angebot#dialogische-körpertherapie",
 	},
-	{
-		name: "Hypnose",
-		href: "#",
-	},
-	{
-		name: "FAQ",
-		href: "#",
-	},
+	{ name: "Hypnose", href: "/angebot#hypnose" },
+	{ name: "FAQ", href: "/angebot#faq" },
 ];
+
 const mehr = [
-	{
-		name: "Kontakt",
-		href: "#",
-	},
-	{
-		name: "Anfahrt",
-		href: "#",
-	},
-	{
-		name: "Kosten",
-		href: "#",
-	},
+	{ name: "Kontakt", href: "/mehr#kontakt" },
+	{ name: "Anfahrt", href: "/mehr#anfahrt" },
+	{ name: "Kosten", href: "/mehr#kosten" },
 ];
 
 export default function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	// Inside the Header component
+	const location = useLocation();
 
+	useEffect(() => {
+		// Close the mobile menu when the route changes
+		setMobileMenuOpen(false);
+	}, [location]);
 	return (
-		<header className='bg-darkTurquis fixed top-0 w-full shadow-shadowHeader'>
+		<header className='fixed top-0 w-full bg-darkTurquis shadow-shadowHeader'>
 			<nav
 				aria-label='Global'
 				className='mx-auto flex max-w-[120rem] items-center justify-between px-8 py-6 lg:px-10'>
 				{/* Logo and Title for large screens */}
 				<div className='flex items-center'>
 					{/* Logo */}
-					<a href='#' className='-m-1.5 p-1.5'>
+					<HashLink to='/' className='-m-1.5 p-1.5'>
 						<span className='sr-only'>Your Company</span>
 						<img alt='' src={logo} className='h-auto w-12 md:w-[3.6rem]' />
-					</a>
+					</HashLink>
 					{/* Title for large screens */}
-					<h1 className='hidden lg:block text-lg font-sans text-darkBrown font-light ml-10 text-center'>
+					<h1 className='hidden ml-10 font-sans text-lg font-light text-center lg:block text-darkBrown'>
 						PRAXIS
 						<br />
 						URVERTRAUEN
@@ -127,7 +115,7 @@ export default function Header() {
 					{/* Home */}
 					<Popover className='relative'>
 						<PopoverButton className='active:border-1 border-none outline-green outline-1 flex w-28 bg-lightTurquis items-center hover:cursor-pointer hover:bg-white text-sm font-light leading-6 text-veryDarkBrown shadow-shadowSubmenu rounded-md pl-[2.3rem] py-[.3rem]'>
-							Home
+							<HashLink to='/'>Home</HashLink>
 						</PopoverButton>
 					</Popover>
 					{/* Über mich */}
@@ -136,7 +124,7 @@ export default function Header() {
 							Über mich
 							<ChevronDownIcon
 								aria-hidden='true'
-								className='h-5 w-5 flex-none text-veryDarkBrown'
+								className='flex-none w-5 h-5 text-veryDarkBrown'
 							/>
 						</PopoverButton>
 						<PopoverPanel
@@ -146,13 +134,13 @@ export default function Header() {
 								{ueberMich.map((item) => (
 									<div
 										key={item.name}
-										className='group relative flex items-center gap-x-6 rounded-lg p-2 text-center text-sm leading-6'>
+										className='relative flex items-center p-2 text-sm leading-6 text-center rounded-lg group gap-x-6'>
 										<div className='flex-auto'>
-											<a
-												href={item.href}
+											<HashLink
+												to={item.href}
 												className='block text-center no-underline bg-none text-veryDarkBrown hover:text-green'>
 												{item.name}
-											</a>
+											</HashLink>
 										</div>
 									</div>
 								))}
@@ -165,7 +153,7 @@ export default function Header() {
 							Angebot
 							<ChevronDownIcon
 								aria-hidden='true'
-								className='h-5 w-5 flex-none text-veryDarkBrown'
+								className='flex-none w-5 h-5 text-veryDarkBrown'
 							/>
 						</PopoverButton>
 						<PopoverPanel
@@ -175,14 +163,14 @@ export default function Header() {
 								{angebot.map((item) => (
 									<div
 										key={item.name}
-										className='group relative flex items-center rounded-lg p-2 text-center text-sm leading-6'>
+										className='relative flex items-center p-2 text-sm leading-6 text-center rounded-lg group'>
 										<div className='flex-auto'>
-											<a
-												href={item.href}
+											<HashLink
+												to={item.href}
 												className='block no-underline text-veryDarkBrown hover:text-green'>
 												{item.name}
 												<span className='absolute inset-0' />
-											</a>
+											</HashLink>
 										</div>
 									</div>
 								))}
@@ -195,7 +183,7 @@ export default function Header() {
 							Mehr
 							<ChevronDownIcon
 								aria-hidden='true'
-								className='h-5 w-5 flex-none  text-veryDarkBrown'
+								className='flex-none w-5 h-5 text-veryDarkBrown'
 							/>
 						</PopoverButton>
 						<PopoverPanel
@@ -205,14 +193,14 @@ export default function Header() {
 								{mehr.map((item) => (
 									<div
 										key={item.name}
-										className='group relative flex items-center rounded-lg p-2 text-center text-sm leading-6'>
+										className='relative flex items-center p-2 text-sm leading-6 text-center rounded-lg group'>
 										<div className='flex-auto'>
-											<a
-												href={item.href}
+											<HashLink
+												to={item.href}
 												className='block no-underline text-veryDarkBrown hover:text-green'>
 												{item.name}
 												<span className='absolute inset-0' />
-											</a>
+											</HashLink>
 										</div>
 									</div>
 								))}
@@ -221,14 +209,14 @@ export default function Header() {
 					</Popover>
 				</PopoverGroup>
 				<div className='hidden lg:flex lg:justify-end'>
-					<a
-						href='../src/pages/mehr.html'
+					<Link
+						to='/mehr'
 						className='font-bold text-[.7rem] outline-1 outline-veryDarkBrown tracking-wide text-center py-2 px-4 rounded-md leading-2 text-stone-700 bg-green no-underline'>
 						TERMIN
 						<br />
 						VEREINBAREN
 						<span aria-hidden='true'></span>
-					</a>
+					</Link>
 				</div>
 			</nav>
 			<Dialog
@@ -237,7 +225,7 @@ export default function Header() {
 				className='lg:hidden'>
 				{/* Background overlay in web sizes */}
 				<div
-					className='hidden md:block fixed inset-0 z-10 bg-lightBrown/30'
+					className='fixed inset-0 z-10 hidden md:block bg-lightBrown/30'
 					aria-hidden='true'
 				/>
 
@@ -247,14 +235,16 @@ export default function Header() {
 						mobileMenuOpen ? "translate-x-0" : "translate-x-full"
 					}`}>
 					<div className='flex items-center justify-between'>
-						<a href='#' className='outline-1 outline-darkBrown -m-1.5 p-1.5'>
+						<HashLink
+							to='/'
+							className='outline-1 outline-darkBrown -m-1.5 p-1.5'>
 							<span className='sr-only'>Your Company</span>
-							<img alt='' src={logo} className='h-20 w-auto' />
-						</a>
+							<img alt='' src={logo} className='w-auto h-20' />
+						</HashLink>
 						<button
 							type='button'
 							onClick={() => setMobileMenuOpen(false)}
-							className='outline-1 outline-darkBrown mr-4 -mt-12 bg-darkBrown border-none text-darkBrown relative group'>
+							className='relative mr-4 -mt-12 border-none outline-1 outline-darkBrown bg-darkBrown text-darkBrown group'>
 							<span className='sr-only'>Close menu</span>
 
 							<div className='flex flex-col justify-center items-center space-y-[4px] relative group-hover:opacity-0 transition-opacity duration-500'>
@@ -294,7 +284,7 @@ export default function Header() {
 							</div>
 
 							{/* Imaginary X (appears on hover) */}
-							<div className='absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500'>
+							<div className='absolute top-0 left-0 flex items-center justify-center w-full h-full transition-opacity duration-500 opacity-0 group-hover:opacity-100'>
 								{/* First diagonal line */}
 								<div className='absolute w-[2rem] h-[.2rem] bg-lightBrown rotate-45'></div>
 								{/* Second diagonal line */}
@@ -304,12 +294,12 @@ export default function Header() {
 					</div>
 					<div className='flow-root mt-10'>
 						<div className='-my-6 divide-y divide-gray-500/10'>
-							<div className='space-y-2 py-6'>
-								<a
-									href='#'
+							<div className='py-6 space-y-2'>
+								<HashLink
+									to='/'
 									className='outline-1 outline-darkBrown no-underline bg-lightBrown group flex w-1/2 items-center pl-3.5 rounded-lg py-2 border-none text-base leading-7 text-veryDarkBrown hover:text-lightBrown hover:bg-darkBrown'>
 									Home
-								</a>
+								</HashLink>
 								<Disclosure as='div' className=''>
 									<DisclosureButton className='outline-1 outline-darkBrown bg-lightBrown group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 border-none text-base leading-7 text-veryDarkBrown hover:text-lightBrown hover:bg-darkBrown'>
 										Über Mich
@@ -322,9 +312,9 @@ export default function Header() {
 										{[...ueberMich].map((item) => (
 											<DisclosureButton
 												key={item.name}
-												as='a'
-												href={item.href}
-												className='outline-1 outline-darkBrown block rounded-lg pl-6 pr-3 text-sm font-light leading-7 text-lightBrown no-underline hover:italic hover:text-green'>
+												as={HashLink}
+												to={item.href}
+												className='block pl-6 pr-3 text-sm font-light leading-7 no-underline rounded-lg outline-1 outline-darkBrown text-lightBrown hover:italic hover:text-green'>
 												• {item.name}
 											</DisclosureButton>
 										))}
@@ -342,9 +332,9 @@ export default function Header() {
 										{[...angebot].map((item) => (
 											<DisclosureButton
 												key={item.name}
-												as='a'
-												href={item.href}
-												className='outline-1 outline-darkBrown block rounded-lg pl-6 pr-3 text-sm font-light leading-7 text-lightBrown no-underline hover:italic hover:text-green'>
+												as={HashLink}
+												to={item.href}
+												className='block pl-6 pr-3 text-sm font-light leading-7 no-underline rounded-lg outline-1 outline-darkBrown text-lightBrown hover:italic hover:text-green'>
 												• {item.name}
 											</DisclosureButton>
 										))}
@@ -362,9 +352,9 @@ export default function Header() {
 										{[...mehr].map((item) => (
 											<DisclosureButton
 												key={item.name}
-												as='a'
-												href={item.href}
-												className='outline-1 outline-darkBrown block rounded-lg pl-6 pr-3 text-sm font-light leading-7 text-lightBrown no-underline hover:italic hover:text-green'>
+												as={HashLink}
+												to={item.href}
+												className='block pl-6 pr-3 text-sm font-light leading-7 no-underline rounded-lg outline-1 outline-darkBrown text-lightBrown hover:italic hover:text-green'>
 												• {item.name}
 											</DisclosureButton>
 										))}
@@ -372,12 +362,12 @@ export default function Header() {
 								</Disclosure>
 								{/* CTA Btn */}
 								<div className='flex'>
-									<a
-										href='../src/pages/mehr.html'
-										className='font-medium w-full outline-1 outline-darkBrown tracking-wide text-center py-2 px-4 rounded-md leading-2 text-veryDarkBrown bg-green no-underline hover:text-green hover:bg-white hover:uppercase'>
+									<HashLink
+										to='/mehr'
+										className='w-full px-4 py-2 font-medium tracking-wide text-center no-underline rounded-md outline-1 outline-darkBrown leading-2 text-veryDarkBrown bg-green hover:text-green hover:bg-white hover:uppercase'>
 										Termin vereinbaren
 										<span aria-hidden='true'></span>
-									</a>
+									</HashLink>
 								</div>
 							</div>
 						</div>
