@@ -114,13 +114,13 @@ export default function Header() {
 				<PopoverGroup className='hidden lg:flex lg:gap-x-8 xl-gap-12'>
 					{/* Home */}
 					<Popover className='relative'>
-						<PopoverButton className='active:border-1 border-none outline-green outline-1 flex w-28 bg-lightTurquis items-center hover:cursor-pointer hover:bg-white text-sm font-light leading-6 text-veryDarkBrown shadow-shadowSubmenu rounded-md pl-[2.3rem] py-[.3rem]'>
+						<PopoverButton className='active:border-1 border-none outline-green outline-1 flex w-28 bg-lightTurquis items-center hover:cursor-pointer hover:bg-white text-sm font-light leading-6 text-veryDarkBrown shadow-shadowSubmenu rounded-md pl-[2.3rem] py-[.3rem] active:text-green visited:bg-darkBrown'>
 							<HashLink to='/'>Home</HashLink>
 						</PopoverButton>
 					</Popover>
 					{/* Über mich */}
 					<Popover className='relative'>
-						<PopoverButton className='flex w-28 outline-green outline-1 pl-4 border-none bg-lightTurquis items-center gap-x-1 hover:cursor-pointer hover:bg-white text-sm font-light leading-6 text-veryDarkBrown shadow-shadowSubmenu rounded-md py-[.3rem]'>
+						<PopoverButton className='flex w-28 outline-green outline-1 pl-4 border-none bg-lightTurquis items-center gap-x-1 hover:cursor-pointer hover:bg-white text-sm font-light leading-6 text-veryDarkBrown shadow-shadowSubmenu rounded-md py-[.3rem] active:text-green visited:bg-darkBrown'>
 							Über mich
 							<ChevronDownIcon
 								aria-hidden='true'
@@ -149,7 +149,7 @@ export default function Header() {
 					</Popover>
 					{/* Angebot */}
 					<Popover className='relative'>
-						<PopoverButton className='flex bg-lightTurquis outline-green outline-1 hover:cursor-pointer hover:bg-white w-28 border-none items-center gap-x-1 text-sm font-light leading-6 text-veryDarkBrown shadow-shadowSubmenu rounded-md pl-5 py-[.3rem]'>
+						<PopoverButton className='flex bg-lightTurquis outline-green outline-1 hover:cursor-pointer hover:bg-white w-28 border-none items-center gap-x-1 text-sm font-light leading-6 text-veryDarkBrown shadow-shadowSubmenu rounded-md pl-5 py-[.3rem] active:text-green visited:bg-darkBrown'>
 							Angebot
 							<ChevronDownIcon
 								aria-hidden='true'
@@ -179,7 +179,7 @@ export default function Header() {
 					</Popover>
 					{/* Mehr */}
 					<Popover className='relative'>
-						<PopoverButton className='outline-green outline-1 flex border-none w-28 hover:cursor-pointer hover:bg-white bg-lightTurquis items-center gap-x-1 text-sm font-light leading-6 text-veryDarkBrown shadow-shadowSubmenu rounded-md pl-8 py-[.3rem]'>
+						<PopoverButton className='outline-green outline-1 flex border-none w-28 hover:cursor-pointer hover:bg-white bg-lightTurquis items-center gap-x-1 text-sm font-light leading-6 text-veryDarkBrown shadow-shadowSubmenu rounded-md pl-8 py-[.3rem] active:text-green visited:bg-darkBrown'>
 							Mehr
 							<ChevronDownIcon
 								aria-hidden='true'
@@ -231,7 +231,7 @@ export default function Header() {
 
 				{/* Opened Menu */}
 				<DialogPanel
-					className={`fixed top-0 right-0 z-20 w-full max-w-md h-[75%] rounded-b-3xl bg-darkBrown px-6 py-6 transition-transform duration-500 transform ${
+					className={`fixed overflow-scroll top-0 right-0 z-20 w-full max-w-md h-auto min-h-[75%] rounded-b-3xl bg-darkBrown px-6 py-6 transition-transform duration-500 transform ${
 						mobileMenuOpen ? "translate-x-0" : "translate-x-full"
 					}`}>
 					<div className='flex items-center justify-between'>
@@ -292,12 +292,12 @@ export default function Header() {
 							</div>
 						</button>
 					</div>
-					<div className='flow-root mt-10'>
+					<div className='flow-root overflow-scroll'>
 						<div className='-my-6 divide-y divide-gray-500/10'>
-							<div className='py-6 space-y-2'>
+							<div className='py-12 space-y-2'>
 								<HashLink
 									to='/'
-									className='outline-1 outline-darkBrown no-underline bg-lightBrown group flex w-1/2 items-center pl-3.5 rounded-lg py-2 border-none text-base leading-7 text-veryDarkBrown hover:text-lightBrown hover:bg-darkBrown'>
+									className='outline-1 outline-darkBrown no-underline bg-lightBrown group flex w-1/2 items-center pl-3.5 rounded-lg py-2 my-2 border-none text-base leading-7 text-veryDarkBrown hover:text-lightBrown hover:bg-darkBrown'>
 									Home
 								</HashLink>
 								<Disclosure as='div' className=''>
@@ -308,7 +308,7 @@ export default function Header() {
 											className='h-5 w-5 flex-none group-data-[open]:rotate-180'
 										/>
 									</DisclosureButton>
-									<DisclosurePanel className='mt-2'>
+									<DisclosurePanel className='mb-4'>
 										{[...ueberMich].map((item) => (
 											<DisclosureButton
 												key={item.name}
@@ -328,7 +328,7 @@ export default function Header() {
 											className='h-5 w-5 flex-none group-data-[open]:rotate-180'
 										/>
 									</DisclosureButton>
-									<DisclosurePanel className='mt-2'>
+									<DisclosurePanel className='mb-4'>
 										{[...angebot].map((item) => (
 											<DisclosureButton
 												key={item.name}
@@ -348,7 +348,7 @@ export default function Header() {
 											className='h-5 w-5 flex-none group-data-[open]:rotate-180'
 										/>
 									</DisclosureButton>
-									<DisclosurePanel className='mt-2'>
+									<DisclosurePanel className='mb-4'>
 										{[...mehr].map((item) => (
 											<DisclosureButton
 												key={item.name}

@@ -55,24 +55,6 @@ export default {
 			lineHeight: {
 				"tight-custom": "1.2",
 			},
-			translate: {
-				"-5px": "-5px",
-			},
-			scale: {
-				125: "1.25",
-			},
-			zIndex: {
-				40: "40",
-				50: "50",
-			},
-			margin: {
-				"-6": "-1.5rem",
-				"1.7rem": "1.7rem",
-			},
-			borderRadius: {
-				lg: "0.5rem",
-				md: "0.375rem",
-			},
 			boxShadow: {
 				shadowHeader: "1px 3px 10px rgba(168, 187, 182, 1)",
 				shadowMenu: "1px 3px -1px rgba(157, 157, 182, 0.6)",
