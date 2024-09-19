@@ -110,7 +110,6 @@ const Uebermich = () => {
 										gespannt, welchen Wegweisern ich noch begegnen werde und wem
 										ich alles eine neue Richtung, Sichtweise oder Tiefe geben
 										darf.
-										<span className='text-veryDarkBrown'>... </span>
 									</span>
 								</>
 							)}

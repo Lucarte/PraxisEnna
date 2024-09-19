@@ -46,7 +46,7 @@ export default function Header() {
 		setMobileMenuOpen(false);
 	}, [location]);
 	return (
-		<header className='fixed top-0 w-full bg-darkTurquis shadow-shadowHeader'>
+		<header className='fixed top-0 z-10 w-full bg-darkTurquis shadow-shadowHeader'>
 			<nav
 				aria-label='Global'
 				className='mx-auto flex max-w-[120rem] items-center justify-between px-8 py-6 lg:px-10'>
