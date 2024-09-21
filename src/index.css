@@ -39,7 +39,52 @@
     }
   }
   
+/* COOKIE BANNER */
+.cookie-banner {
+    width: 100%;
+    background: rgb(65, 47, 32); /* Dark brown */
+    color: rgb(136, 152, 48); /* Olive green */
+    position: fixed;
+    bottom: 0;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1111;
+    border-width: 8px;
+    border-color: rgb(136, 152, 48); /* Olive green */
+    border-top: 6px solid;
+    font-size: 1.1rem;
+  }
   
+  .cookie-banner button {
+    border-radius: 8px;
+    border-width: 1px;
+    background: rgb(65, 47, 32); /* Dark brown */
+    border-style: solid;
+    color: white;
+    border-color: rgb(136, 152, 48); /* Olive green */
+    font-size: 0.9rem;
+    font-weight: 400; /* Corrected font-weight */
+    padding: 0.7rem 1rem 0.6rem 1rem;
+    margin-top: 10px;
+    margin-left: 3rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, font-size 0.3s ease; /* Smooth transitions */
+  }
   
+  .cookie-banner button:hover {
+    background: rgb(85, 65, 50); /* Slightly lighter brown */
+    border-color: rgb(196, 168, 146); /* Complementary light brown */
+    font-size: 1rem;
+    cursor: pointer;
+  }
   
+  /* Media Query for Hand Sizes */
+  @media (max-width: 768px) {
+    .cookie-banner {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  }
   

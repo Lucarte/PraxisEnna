@@ -12,13 +12,13 @@ export default {
 			colors: {
 				inherit: "inherit",
 				ringPrimary: "rgb(59 130 246 / .5)",
-				darkBrown: "rgb(126 94 69)", // Equivalent to your .bg-darkBrown
-				veryDarkBrown: "rgb(65 47 32)", // Equivalent to your .bg-darkBrown
-				darkTurquis: "rgb(192 212 214)", // Equivalent to your .bg-darkTurquis
+				darkBrown: "rgb(126 94 69)",
+				veryDarkBrown: "rgb(65 47 32)",
+				darkTurquis: "rgb(192 212 214)",
 				lightTurquis: "rgb(215 229 231)",
 				turquis: "#C0D5D6",
-				lightBrown: "rgb(196 168 146)", // Equivalent to your .bg-lightBrown
-				green: "rgb(136 152 48)", // Equivalent to your .bg-lightBrown
+				lightBrown: "rgb(196 168 146)",
+				green: "rgb(136 152 48)",
 			},
 			backgroundImage: {
 				"gradient-to-b": "linear-gradient(to bottom, var(--tw-gradient-stops))",
@@ -27,10 +27,10 @@ export default {
 				"footer-mobile": "url('/src/assets/footerMobileImg.png')",
 			},
 			gradientColorStops: {
-				darkBrown: "#7e5e45", // Corresponds to .from-darkBrown
-				darkTurquis: "#c0d5d6", // Corresponds to .from-darkTurquis
-				lightBrown: "#c4a892", // Corresponds to .to-lightBrown
-				lightTurquis: "#d7e6e7", // Corresponds to .to-lightTurquis
+				darkBrown: "#7e5e45",
+				darkTurquis: "#c0d5d6",
+				lightBrown: "#c4a892",
+				lightTurquis: "#d7e6e7",
 			},
 			container: {
 				center: true,

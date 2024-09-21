@@ -7,6 +7,7 @@ import Angebot from "./pages/Angebot";
 import Mehr from "./pages/Mehr";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import CookieBanner from "./components/CookieBanner";
 
 function App() {
 	const location = useLocation(); // Get the current location
@@ -28,6 +29,7 @@ function App() {
 					<Route path='/impressum' element={<Impressum />} />
 					<Route path='/datenschutz' element={<Datenschutz />} />
 				</Routes>
+				<CookieBanner />
 				<Footer bgClasses={footerBgClass} />
 			</main>
 		</>
