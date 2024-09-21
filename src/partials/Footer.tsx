@@ -60,13 +60,13 @@ const Footer = ({ bgClasses }: FooterProps) => {
 			</div>
 			<div className='relative z-10 leading-6 md:grid md:gap-2 md:pr-12'>
 				<div className='flex justify-center gap-12 underline hover:text-darkBrown'>
-					<a href='./impressum.html' className='text-[#f5f5f5]'>
+					<a href='/impressum' className='text-[#f5f5f5]'>
 						Impressum
 					</a>
-					<a href='./mehr.html' className='text-[#f5f5f5]'>
+					<a href='/mehr' className='text-[#f5f5f5]'>
 						Kontakt
 					</a>
-					<a href='./datenschutz.html' className='text-[#f5f5f5]'>
+					<a href='/datenschutz' className='text-[#f5f5f5]'>
 						Datenschutz
 					</a>
 				</div>

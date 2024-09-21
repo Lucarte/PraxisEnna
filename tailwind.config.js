@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+	mode: "jit",
 	theme: {
 		extend: {
 			fontFamily: {
@@ -59,6 +60,7 @@ export default {
 				shadowHeader: "1px 3px 10px rgba(168, 187, 182, 1)",
 				shadowMenu: "1px 3px -1px rgba(157, 157, 182, 0.6)",
 				shadowSubmenu: "1px 3px 15px rgba(168, 187, 182, 0.6)",
+				shadowFormular: "18px 18px 15px #a8bbb6",
 			},
 			transitionProperty: {
 				opacity: "opacity",

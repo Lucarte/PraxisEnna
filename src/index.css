@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* UEBER MICH PAGE */
 .custom-list-style {
     list-style-image: url('/src/assets/listImgMobile.svg');
 }
@@ -11,3 +12,34 @@
         list-style-image: url('/src/assets/listImg.svg');
 	}
 }
+
+/* MEHR PAGE - FORM  */
+.custom-mdForm-margin {
+    margin: 2rem auto; /* Center horizontally with auto left/right margins */
+    width: 100%;
+  }
+  
+  @media (min-width: 500px) {
+    .custom-mdForm-margin {
+      margin: 7rem auto 2rem auto; /* Center horizontally */
+      width: 25rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .custom-mdForm-margin {
+      margin: 5rem 2rem 3rem auto; /* Keep a consistent horizontal margin */
+      width: 30rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .custom-mdForm-margin {
+      margin: 5rem 2rem 3rem 13rem; /* Align the form to the right of the screen */
+    }
+  }
+  
+  
+  
+  
+  
