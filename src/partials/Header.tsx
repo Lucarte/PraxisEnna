@@ -55,7 +55,11 @@ export default function Header() {
 					{/* Logo */}
 					<HashLink to='/' className='-m-1.5 p-1.5'>
 						<span className='sr-only'>Your Company</span>
-						<img alt='' src={logo} className='h-auto w-12 md:w-[3.6rem]' />
+						<img
+							alt='Digital drawing of a young tree just starting to grow out of an old chopped up but wise tree trunc'
+							src={logo}
+							className='h-auto w-12 md:w-[3.6rem]'
+						/>
 					</HashLink>
 					{/* Title for large screens */}
 					<h1 className='hidden ml-10 font-sans text-lg font-light text-center lg:block text-darkBrown'>
@@ -239,7 +243,11 @@ export default function Header() {
 							to='/'
 							className='outline-1 outline-darkBrown -m-1.5 p-1.5'>
 							<span className='sr-only'>Your Company</span>
-							<img alt='' src={logo} className='w-auto h-20' />
+							<img
+								alt='Digital drawing of a young tree just starting to grow out of an old chopped up but wise tree trunc'
+								src={logo}
+								className='w-auto h-20'
+							/>
 						</HashLink>
 						<button
 							type='button'
@@ -300,7 +308,7 @@ export default function Header() {
 									className='outline-1 outline-darkBrown no-underline bg-lightBrown group flex w-1/2 items-center pl-3.5 rounded-lg py-2 my-2 border-none text-base leading-7 text-veryDarkBrown hover:text-lightBrown hover:bg-darkBrown'>
 									Home
 								</HashLink>
-								<Disclosure as='div' className=''>
+								<Disclosure as='div'>
 									<DisclosureButton className='outline-1 outline-darkBrown bg-lightBrown group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 border-none text-base leading-7 text-veryDarkBrown hover:text-lightBrown hover:bg-darkBrown'>
 										Über Mich
 										<ChevronDownIcon
@@ -320,7 +328,7 @@ export default function Header() {
 										))}
 									</DisclosurePanel>
 								</Disclosure>
-								<Disclosure as='div' className=''>
+								<Disclosure as='div'>
 									<DisclosureButton className='outline-1 outline-darkBrown bg-lightBrown group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 border-none text-base leading-7 text-veryDarkBrown hover:text-lightBrown hover:bg-darkBrown'>
 										Angebot
 										<ChevronDownIcon
@@ -340,7 +348,7 @@ export default function Header() {
 										))}
 									</DisclosurePanel>
 								</Disclosure>
-								<Disclosure as='div' className=''>
+								<Disclosure as='div'>
 									<DisclosureButton className='outline-1 outline-darkBrown bg-lightBrown group flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 border-none text-base leading-7 text-veryDarkBrown hover:text-lightBrown hover:bg-darkBrown'>
 										Mehr
 										<ChevronDownIcon
