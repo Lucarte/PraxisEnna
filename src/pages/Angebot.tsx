@@ -159,7 +159,7 @@ const Angebot = () => {
 						className={`px-10 text-veryDarkBrown transition-all duration-500 ${
 							isExpanded
 								? "h-auto" // Fully expanded height for all screen sizes
-								: "h-86 lg:h-[20rem] overflow-hidden" // Different heights for larger screens
+								: "h-86 lg:h-[25rem] overflow-hidden" // Different heights for larger screens
 						}`}>
 						<div className='flex flex-col leading-8 text-center lg:text-xl'>
 							<p className='pr-10 my-0'>Hypnose – gackern wie ein Huhn…</p>
