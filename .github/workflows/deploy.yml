@@ -36,9 +36,9 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
-          ftp-server: "ftp://praxis-urvertrauen.de"  # e.g., ftp://ftp.yourdomain.com
-          ftp-username: ${{ secrets.FTP_USERNAME }}  # Add these to GitHub secrets
-          ftp-password: ${{ secrets.FTP_PASSWORD }}  # Add these to GitHub secrets
+          server: "ftp://praxis-urvertrauen.de"  # e.g., ftp://ftp.yourdomain.com
+          username: ${{ secrets.FTP_USERNAME }}  # Add these to GitHub secrets
+          password: ${{ secrets.FTP_PASSWORD }}  # Add these to GitHub secrets
           local-dir: "./dist"  # Directory to deploy (React build folder)
           server-dir: "/dist"  # Netcup hosting public directory (adjust if needed)
           dry-run: false
