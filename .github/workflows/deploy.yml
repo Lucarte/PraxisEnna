@@ -23,7 +23,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Specify your Node.js version
+          node-version: '20' # Specify your Node.js version
 
       # Install dependencies and build
       - name: Install dependencies
@@ -36,7 +36,7 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
-          server: "ftp://praxis-urvertrauen.de"  # e.g., ftp://ftp.yourdomain.com
+          server: "praxis-urvertrauen.de"  # e.g., ftp://ftp.yourdomain.com
           username: ${{ secrets.FTP_USERNAME }}  # Add these to GitHub secrets
           password: ${{ secrets.FTP_PASSWORD }}  # Add these to GitHub secrets
           local-dir: "./dist/"  # Directory to deploy (React build folder)
