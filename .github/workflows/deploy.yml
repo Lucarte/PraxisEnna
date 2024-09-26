@@ -32,10 +32,13 @@ jobs:
       - name: Build the app
         run: npm run build
 
-      # Deploy the build folder to a deployment service
-      # This example uses GitHub Pages, adjust for your deployment service
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+   # Deploy the build folder to Netcup via FTP
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # This should match your build output folder
+          ftp-server: "ftp://praxis-urvertrauen.de"  # e.g., ftp://ftp.yourdomain.com
+          ftp-username: ${{ secrets.FTP_USERNAME }}  # Add these to GitHub secrets
+          ftp-password: ${{ secrets.FTP_PASSWORD }}  # Add these to GitHub secrets
+          local-dir: "./dist"  # Directory to deploy (React build folder)
+          server-dir: "/dist"  # Netcup hosting public directory (adjust if needed)
+          dry-run: false
