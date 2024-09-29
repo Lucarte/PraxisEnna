@@ -39,6 +39,6 @@ jobs:
           server: "praxis-urvertrauen.de"  # e.g., ftp://ftp.yourdomain.com
           username: ${{ secrets.FTP_USERNAME }}  # Add these to GitHub secrets
           password: ${{ secrets.FTP_PASSWORD }}  # Add these to GitHub secrets
-          local-dir: "./dist/"  # Directory to deploy (React build folder)
+          local-dir: "./"  # Directory to deploy (React build folder)
           server-dir: "/praxis-urvertrauen.de/"  # Netcup hosting public directory (adjust if needed)
           dry-run: false
