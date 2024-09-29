@@ -40,5 +40,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}  # Add these to GitHub secrets
           password: ${{ secrets.FTP_PASSWORD }}  # Add these to GitHub secrets
           local-dir: "./dist/"  # Directory to deploy (React build folder)
-          server-dir: "/httpdocs/"  # Netcup hosting public directory (adjust if needed)
+          server-dir: "/dist/"  # Netcup hosting public directory (adjust if needed)
           dry-run: false
