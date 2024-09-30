@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import footerTree from "/src/assets/footerTree.svg";
+import { Link } from "react-router-dom";
 
 type FooterProps = {
 	bgClasses?: string;
@@ -60,15 +61,15 @@ const Footer = ({ bgClasses }: FooterProps) => {
 			</div>
 			<div className='relative z-10 leading-6 md:grid md:gap-2 md:pr-12'>
 				<div className='flex justify-center gap-12 underline hover:text-darkBrown'>
-					<a href='/impressum' className='text-[#f5f5f5]'>
+					<Link to='/impressum' className='text-[#f5f5f5]'>
 						Impressum
-					</a>
-					<a href='/mehr' className='text-[#f5f5f5]'>
+					</Link>
+					<Link to='/mehr' className='text-[#f5f5f5]'>
 						Kontakt
-					</a>
-					<a href='/datenschutz' className='text-[#f5f5f5]'>
+					</Link>
+					<Link to='/datenschutz' className='text-[#f5f5f5]'>
 						Datenschutz
-					</a>
+					</Link>
 				</div>
 				<p className='m-0'>© 2024 | Urvertrauen | Schleswig-Holstein</p>
 			</div>
