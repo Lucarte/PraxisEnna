@@ -43,3 +43,5 @@ jobs:
           server-dir: "/"  # Netcup hosting public directory (adjust if needed)
           dry-run: false
           verbose: true  # Enable verbose logging for debugging
+
+          
