@@ -40,8 +40,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}  # Add these to GitHub secrets
           password: ${{ secrets.FTP_PASSWORD }}  # Add these to GitHub secrets
           local-dir: "./dist/"  # Directory to deploy (React build folder)
-          server-dir: "/"  # Netcup hosting public directory (adjust if needed)
+          server-dir: "/praxis-urvertrauen.de/dist/"  # Netcup hosting public directory (adjust if needed)
           dry-run: false
           verbose: true  # Enable verbose logging for debugging
 
-          
