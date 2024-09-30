@@ -38,7 +38,7 @@ const Mehr = () => {
 						<form
 							className='text-[1rem] flex flex-col gap-4 p-8 mx-0 mt-0 mb-20 rounded-[10px] shadow-shadowhtmlFormular text-darkBrown lg:py-8 lg:px-12'
 							id='register-htmlForm'
-							action='../../php/sendMail.php'
+							action='/php/sendMail.php'
 							method='post'>
 							{/* <!-- <htmlForm id="register-htmlForm" action="../../src/htmlFormValidation.php" method="post"> --> */}
 							<h2 className='font-title mb-4 text-[1.6rem] text-center lg:tracking-wider'>
