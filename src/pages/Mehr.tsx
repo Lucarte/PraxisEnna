@@ -1,10 +1,12 @@
+import homechime from "../assets/homechime.png";
+
 const Mehr = () => {
 	return (
 		// CONTACT htmlForM
 		<article className='flex flex-col py-24 overflow-x-hidden leading-8 bg-darkTurquis lg:bg-lightBrown px-auto'>
-			<section className='lg:flex lg:flex-row-reverse lg:bg-darkTurquis lg:w-full xl:24 2xl:pl-32 2xl:-pr-24 lg:justify-center lg:items-center'>
-				<div className='w-full bg-[url("/src/assets/hand.png")] bg-no-repeat bg-cover text-darkBrown lg:bg-darkTurquis lg:bg-none lg:flex lg:justify-center items-center 2xl:-pr-24'>
-					<div className='flex flex-col gap-10 px-12 pt-4 pb-12 text-center lg:-mt-24'>
+			<section className='lg:flex lg:flex-row-reverse lg:bg-darkTurquis lg:w-full lg:items-center lg:justify-center gap-[13rem]'>
+				<div className='w-full lg:w-1/2 pb-10 pt-6 bg-[url("/src/assets/hand.png")] bg-no-repeat bg-cover justify-center lg:justify-start flex text-darkBrown lg:bg-darkTurquis lg:bg-none lg:flex items-center'>
+					<div className='flex flex-col gap-10 text-center lg:-mt-24'>
 						<div className='flex flex-col items-start mx-0 mt-12 mb-8 bold text-veryDarkBrown lg:opacity-0'>
 							<h2 className='text-[18px]'>MEHR...</h2>
 							<span className='block h-1 -mt-3 mr-0 mb-0 ml-[1.3rem] rounded-md w-16 bg-turquis'></span>
@@ -33,84 +35,13 @@ const Mehr = () => {
 						</div>
 					</div>
 				</div>
-				<div className='flex justify-center lg:mt-12 lg:ml-16 bg-turquis lg:w-1/2'>
-					<div className='custom-mdhtmlForm-margin'>
-						<form
-							className='text-[1rem] flex flex-col gap-4 p-8 mx-0 mt-0 mb-20 rounded-[10px] shadow-shadowhtmlFormular text-darkBrown lg:py-8 lg:px-12'
-							id='register-htmlForm'
-							action='/php/sendMail.php'
-							method='post'>
-							{/* <!-- <htmlForm id="register-htmlForm" action="../../src/htmlFormValidation.php" method="post"> --> */}
-							<h2 className='font-title mb-4 text-[1.6rem] text-center lg:tracking-wider'>
-								Kontaktformular
-							</h2>
-							<div className='flex flex-col gap-[.2rem]'>
-								<label
-									className='font-medium text-darkBrown'
-									id='anrede-label'
-									htmlFor='anrede'
-									aria-describedby='nameHint'>
-									Anrede:
-								</label>
-								<select
-									className='text-[1rem] border-solid border-[2px] border-darkBrown rounded-md p-[.2rem] min-w-[500px]-p-[.4rem] min-w-[500px]-[12rem]'
-									required
-									id='anrede'
-									name='anrede'
-									data-check='anrede'>
-									<option value=''>Bitte wählen</option>
-									<option value='child'>Kind</option>
-									<option value='female'>Frau</option>
-									<option value='divers'>Divers</option>
-									<option value='male'>Herr</option>
-								</select>
-								<p id='anredeHint' className='hidden mt-[.3rem]'>
-									Wahl erhtmlForderlich!
-								</p>
-							</div>
-							<div className='text-[1rem]'>
-								<label className='font-medium text-darkBrown' htmlFor='name'>
-									Name
-								</label>
-								<input
-									required
-									id='name'
-									name='name'
-									type='text'
-									className='text-[#889830] text-[1rem] rounded-lg leading-none border-2 border-[#7E5E45] focus:border-white transition-all duration-300 p-2 w-full outline-none'
-									placeholder='Name'
-								/>
-							</div>
-							<div className='text-[1rem]'>
-								<label className='font-medium text-darkBrown' htmlFor='email'>
-									E-Mail
-								</label>
-								<input
-									required
-									id='email'
-									name='email'
-									type='email'
-									className='text-[#889830] rounded-lg text-[1rem] leading-none border-2 border-[#7E5E45] focus:border-white transition-all duration-300 p-2 w-full outline-none'
-									placeholder='E-Mail'
-								/>
-							</div>
-							<div>
-								<label className='font-medium text-darkBrown' htmlFor='message'>
-									Nachricht
-								</label>
-								<textarea
-									required
-									id='message'
-									name='message'
-									className='text-[#889830] text-[1rem] rounded-lg leading-none border-2 border-[#7E5E45] focus:border-white transition-all duration-300 p-2 w-full outline-none'
-									placeholder='Nachricht'></textarea>
-							</div>
-							<input
-								type='submit'
-								value='SUBMIT'
-								className='hover:bg-[#412F20] w-full bg-[#7E5E45] rounded-md border-0 cursor-pointer text-white text-base p-2 pb-[10px] transition-all duration-300 mt-4'
-							/>
-						</form>
+				<div className='flex justify-center lg:mt-20 lg:mb-8 bg-turquis lg:w-1/2 lg:justify-end'>
+					<div className='w-full md:w-0 bg-[url("/src/assets/homechime.png")] bg-no-repeat bg-cover mr-0 md:mr-[13rem]'>
+						<img
+							className='opacity-0 md:opacity-100 py-0 md:pt-12 md:pb-8 md:h-[26rem] md:p-0 lg:h-[27rem] lg:pr-20'
+							src={homechime}
+							alt='beautiful house of a bird'
+						/>
 					</div>
 				</div>
 			</section>
@@ -173,82 +104,3 @@ const Mehr = () => {
 };
 
 export default Mehr;
-
-// SENDMAIL FILE
-// <?php
-
-// ini_set('display_errors', 1);
-// error_reporting(E_ALL);
-
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
-// use PHPMailer\PHPMailer\Exception;
-
-// require './Mail/PHPMailer/src/Exception.php';
-// require './Mail/PHPMailer/src//PHPMailer.php';
-// require './Mail/PHPMailer/src/SMTP.php';
-
-// $anrede = $_POST['anrede'];
-// $name = $_POST['name'];
-// $email = $_POST['email'];
-// $message = $_POST['message'];
-// $rechnungsEmail = "lucatobonm@gmail.com";
-// $first_name = "";
-// $last_name = "";
-// $rechnungsID = "";
-// $mail = new PHPMailer(true); // Passing true enables exceptions
-// try {
-//   // SMTP configuration
-//   $mail->isSMTP();
-//   $mail->Host = 'mxe884.netcup.net'; // Your SMTP server address
-//   $mail->SMTPAuth = true;
-//   $mail->Username = 'Mail@praxis-urvertrauen.de'; // Your SMTP username
-//   $mail->Password = 'WhereAreTheApples'; // Your SMTP password
-//   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use ENCRYPTION_STARTTLS or ENCRYPTION_SMTPS
-//   $mail->Port = 25; // SMTP port
-
-//   $mail->CharSet = 'UTF-8';
-//   $mail->setFrom('Mail@praxis-urvertrauen.de', 'www.praxis-urvertrauen.de'); // FROM
-//   $mail->addAddress($rechnungsEmail, $first_name . " " . $last_name); // TO
-
-//   $subject = '=?UTF-8?B?' . base64_encode('Weiterleitung' . $rechnungsID) . '?=';
-//   $mail->Subject = $subject;
-
-//   $mail->isHTML(true);
-//   $mail->Body   = '<!doctype html>
-// <html>
-//   <head>
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-//     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-//     <style>
-//       body {
-//         font-family: sans-serif;
-//         -webkit-font-smoothing: antialiased;
-//         line-height: 1.5;
-//         margin: 1rem;
-//         -ms-text-size-adjust: 100%;
-//         -webkit-text-size-adjust: 100%;
-//       }
-//    </style>
-//   </head>
-
-//   <body>
-//     <h1 >POST von URVERTRAUEN</h1>
-//       <section>
-//         <p > Anrede: $anrede</p>
-//         <p > Name: $name </p>
-//         <p > E-Mail: $email </p>
-//         <p > Message: $message</p>
-//       </section>
-//   </body>
-// </html>';
-
-//   $mail->AltBody = 'Anfrage von Urvertrauen';
-
-//   $mail->send();
-//   echo "<script> window.location = 'http://www.praxis-urvertrauen.de' </script>";
-
-//   // EMAIL SENDED
-// } catch (Exception $e) {
-//   echo $e;
-// }
