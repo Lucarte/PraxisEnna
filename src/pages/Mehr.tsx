@@ -36,7 +36,7 @@ const Mehr = () => {
 					</div>
 				</div>
 				<div className='flex justify-center lg:mt-20 lg:mb-8 bg-turquis lg:w-1/2 lg:justify-end'>
-					<div className='w-full md:w-0 bg-[url("/src/assets/homechime.png")] bg-no-repeat bg-cover mr-0 md:mr-[13rem]'>
+					<div className='w-full md:w-0 bg-[url("/src/assets/homechime.png")] bg-no-repeat bg-cover mr-0 md:mr-[13rem] lg:mr-[22rem]'>
 						<img
 							className='opacity-0 md:opacity-100 py-0 md:pt-12 md:pb-8 md:h-[26rem] md:p-0 lg:h-[27rem] lg:pr-20'
 							src={homechime}
