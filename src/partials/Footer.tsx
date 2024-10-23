@@ -52,7 +52,7 @@ const Footer = ({ bgClasses }: FooterProps) => {
 					alt='bottom half of the logo'
 				/>{" "}
 			</div>
-			<div className='relative z-10 leading-6 md:grid md:col-start-1 md:row-start-1 md:row-end-2 md:gap-2'>
+			<div className='relative z-10 leading-6 md:mr-12 md:grid md:col-start-1 md:row-start-1 md:row-end-2 md:gap-2'>
 				<h2 className='hidden lg:block lg:mt-0 font-bold text-0 md:text-[1.12rem] font-title'>
 					ANNE GRYSAR
 				</h2>

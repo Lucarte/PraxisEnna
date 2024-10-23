@@ -42,5 +42,4 @@ jobs:
           local-dir: "./dist/"  # Directory to deploy (React build folder)
           server-dir: "/praxis-urvertrauen.de/"  # Netcup hosting public directory (adjust if needed)
           dry-run: false
-          verbose: true  # Enable verbose logging for debugging
 
