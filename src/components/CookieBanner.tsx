@@ -18,7 +18,7 @@ const CookieBanner: React.FC = () => {
 	if (!isBannerVisible) return null;
 
 	return (
-		<div className='cookie-banner'>
+		<div className='flex flex-col justify-center cookie-banner lg:flex-row lg:justify-between'>
 			<p>
 				Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung
 				unserer Webseite erklären Sie sich damit einverstanden, dass wir Cookies
@@ -26,6 +26,7 @@ const CookieBanner: React.FC = () => {
 				unserer Datenschutzerklärung.
 			</p>
 			<button
+				className='mr-12 lg:mr-0'
 				onClick={handleAcceptCookies}
 				onMouseOver={() => setIsHovered(true)}
 				onMouseOut={() => setIsHovered(false)}
